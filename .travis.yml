@@ -7,4 +7,5 @@ before_install:
 
 script:
   - docker run -e ankitzin/docker_react_nginx npm run test -- --coverage
+  
 
