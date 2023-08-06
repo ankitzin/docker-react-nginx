@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install: 
-  - docker build -t anki17345/docker_react_nginx -f Dockerfile.dev .
+  - docker build -t docker_react_nginx -f Dockerfile.dev .
 
 script:
-  - docker run -e anki17345/docker_react_nginx npm run test -- --coverage
+  - docker run -e docker_react_nginx npm run test -- --coverage
 
