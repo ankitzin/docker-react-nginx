@@ -2,7 +2,13 @@ sudo: required
 services:
   - docker
 
+env:
+  global:
+    - DOCKER_USERNAME=anki17345
+    - DOCKER_PASSWORD=@ankit123#
+
 before_install: 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t docker_react_nginx -f Dockerfile.dev .
 
 script:
